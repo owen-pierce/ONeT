@@ -12,4 +12,4 @@ main: $(OBJS)
 	$(CC) $(CFLAGS) -c -o $@ $^
 
 clean:
-	rm -rf *.o main
+	rm -rf *.o main.c
