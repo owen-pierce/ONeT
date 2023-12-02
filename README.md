@@ -16,5 +16,9 @@ Client Requirements:
 - hostapd
 - dnsmasq
 
-Configuration:
-
+Running ONeT:
+- "-h" : Help prompt
+- "-g" : Generate default config
+- "-s" : Start ONeT
+- "-d" : Do not kill existing wireless processes (if running)
+- "-w" : Not implemented
