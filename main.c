@@ -850,45 +850,6 @@ int main (int argc, char *argv[]) {
     							//strcpy(srce, " > /dev/null");
     							//strcat(dste, srce);
 
-								void* routine(void* args){
-									//sleep(1);
-									//int a = system(dste);
-									int pid_Hostapd = fork();
-									if (pid_Hostapd == -1) {
-										execlp(dste, NULL);
-									} else {
-										wait(NULL);
-									}
-    								if (remove("/home/root/router/thread") == 0) {
-   									}
-									printf("Hotspot started.\n");
-
-								}
-
-								pthread_t th[THREAD_NUM];
-								pthread_attr_t detachedThread;
-								pthread_attr_init(&detachedThread);
-								pthread_attr_setdetachstate(&detachedThread, PTHREAD_CREATE_DETACHED);
-								int i;
-								for (i = 0; i < THREAD_NUM; i++) {
-									if (pthread_create(&th[i], &detachedThread, &routine, NULL) != 0) {
-										perror("Fatal");
-									}
-								pthread_detach(th[i]);
-								}
-
-								// for (i = 0; i < THREAD_NUM; i++) {
-								// 	if (pthread_join(th[i], NULL) != 0 ) {
-								// 		perror("Fatal");
-								// 	}
-								// }
-
-								//pthread_attr_destroy(&detachedThread);
-								pthread_exit(0);
-								// return 0;
-    							
-
-
     						} else {
     							printf("Interface type invalid.\n");
     					} 
