@@ -1,6 +1,6 @@
 # ONeT Access
 
-A routing/configuration tool for allowing an Android phone running "EasyTether" to share its connection wirelessly
+A routing/configuration tool that allows an Android phone running "EasyTether" to share its connection wirelessly
 to other devices through the use of hostapd.
 
 Designed with a minimalistic approach to run on Embedded Linux.
